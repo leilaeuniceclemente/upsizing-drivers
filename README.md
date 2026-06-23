@@ -55,7 +55,3 @@ python3 02_build_tool.py
 Built as a portfolio piece translating qualitative consumer research (in-home visits, shop-alongs) and retail panel data into an interactive diagnostic. The framework covers four FMCG categories with distinct #1 barriers — dosage guidance, convenience, entry price point, and value communication legibility — and five growth principles derived from competitive upsizing case studies.
 
 Category names are abstracted (A–D). No proprietary or confidential data is included.
-
----
-
-*Synthetic data · noindex · leilistiic.github.io*
