@@ -2,7 +2,7 @@
 
 Interactive tool for mapping consumer upsizing barriers and diagnosing growth playbook gaps across FMCG categories in the Philippine market.
 
-![Upsizing Decision Console](preview.png)
+![Upsizing Decision Console](preview1.png)
 
 ---
 
