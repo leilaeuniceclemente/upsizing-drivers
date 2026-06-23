@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📦</text></svg>">
 <title>Upsizing Decision Console</title>
 <style>
   :root {
@@ -133,10 +134,54 @@
   .gap-table tr:last-child td { border-bottom: none; }
   .gap-table tr:hover td { background: rgba(255,255,255,0.02); }
 
-  .footer { text-align: center; padding: 20px 32px; font-size: 11px; color: var(--muted); border-top: 1px solid var(--border); margin-top: 48px; }
+  .gap-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  @media (max-width: 680px) {
+    /* Header */
+    .header { padding: 14px 16px; gap: 10px; }
+    .header-badge { display: none; }
+    .header-title { font-size: 14px; }
+    .header-sub { font-size: 11px; }
+
+    /* Tabs scroll */
+    .tabs { padding: 0 16px; overflow-x: auto; -webkit-overflow-scrolling: touch; gap: 0; }
+    .tab { padding: 12px 14px; font-size: 12px; white-space: nowrap; }
+
+    /* Main padding */
+    .main { padding: 16px 16px 72px; }
+
+    /* Controls stack — remove any inherited indent */
+    .control-row { flex-direction: column; gap: 14px; padding: 0; align-items: flex-start; }
+    .control-group { padding: 0; width: 100%; }
+    .control-group label { text-align: left; padding: 0; margin: 0; display: block; }
+    .toggle-group { flex-wrap: wrap; }
+
+    /* Sulit bar label */
+    .sulit-label { width: 120px; font-size: 11px; }
+
+    /* Profile stats */
+    .profile-row { gap: 8px; }
+    .profile-stat { min-width: unset; flex: 1; padding: 10px 12px; }
+
+    /* Principle row reflow */
+    .principle-row { grid-template-columns: 1fr; gap: 6px; }
+    .principle-desc { padding: 0; }
+    .score-circle { margin-left: 0; }
+
+    /* Gap table scroll */
+    .gap-table-wrap { overflow-x: auto; }
+    .gap-table { min-width: 480px; }
+
+    /* Context bar */
+    .context-bar { gap: 12px; padding: 12px; }
+
+    /* Footer — add bottom padding so portfolio button doesn't overlap */
+    .footer { padding: 16px 16px 60px; }
+  }
 </style>
 </head>
 <body>
+<a href="https://leilaeuniceclemente.github.io" style="position:fixed;bottom:16px;left:16px;z-index:9999;display:inline-flex;align-items:center;gap:6px;padding:7px 14px;background:rgba(26,29,39,0.92);backdrop-filter:blur(8px);border:1px solid rgba(124,106,247,0.4);border-radius:6px;font-size:12px;font-weight:600;color:rgba(232,234,240,0.7);text-decoration:none;font-family:system-ui,sans-serif;" onmouseover="this.style.color='#7c6af7';this.style.borderColor='#7c6af7'" onmouseout="this.style.color='rgba(232,234,240,0.7)';this.style.borderColor='rgba(124,106,247,0.4)'">← Portfolio</a>
 
 <div class="header">
   <div class="header-icon">📦</div>
@@ -243,6 +288,7 @@
     <div style="margin-top:16px">
       <div class="section-label">Priority Gap — Leader vs. Category Average</div>
       <div class="card">
+        <div class="gap-table-wrap">
         <table class="gap-table">
           <thead>
             <tr>
@@ -251,6 +297,7 @@
           </thead>
           <tbody id="gap-tbody"></tbody>
         </table>
+        </div>
       </div>
     </div>
 
